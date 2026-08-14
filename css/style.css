@@ -1039,29 +1039,3 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* ========================================================
-   إصلاحات شاشات الهاتف (Mobile Responsive Fixes)
-   هذا الكود سيعمل فقط على الهواتف ولن يؤثر على الكمبيوتر نهائياً
-   ======================================================== */
-
-@media (max-width: 768px) {
-    .section { padding: var(--space-lg) 0; }
-    .about-grid, .works-grid, .con-grid, .management-grid, .education-grid, .links-grid { gap: var(--space-lg); }
-    .con-title { font-size: 2.5rem; }
-    .section-title { font-size: 1.8rem; }
-    .stat-number { font-size: 1.8rem; }
-    .hero-title { font-size: 2.2rem; text-align: center; }
-    .hero-subtitle, .hero-intro { text-align: center; margin-left: auto; margin-right: auto; }
-    .hero-buttons { justify-content: center; }
-    .profile-img { width: 180px; height: 180px; }
-    .profile-frame-intro .profile-img { width: 150px; height: 150px; }
-    .intro-text { font-size: 1.3rem; padding: 0 15px; }
-    .mt-4 { margin-top: var(--space-lg); }
-    .separator { margin: var(--space-xl) auto; }
-    .stat-box { padding: var(--space-md); }
-}
-
-@media (max-width: 480px) {
-    .stats-container, .links-grid { grid-template-columns: 1fr; }
-}
