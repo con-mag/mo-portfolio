@@ -1039,3 +1039,65 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ========================================================
+   إصلاحات شاشات الهاتف (Mobile Responsive Fixes) - النسخة النهائية
+   ======================================================== */
+
+@media (max-width: 768px) {
+    /* 1. إجبار المتصفح على منع التمدد العرضي (يحل مشكلة الفراغ والنافبار) */
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+        width: 100%;
+    }
+
+    /* 2. إصلاح شريط التنقل العلوي وتوفير مساحة للأيقونات */
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        font-size: 1.1rem; 
+    }
+    .nav-controls {
+        gap: 0.5rem;
+    }
+
+    /* 3. إصلاح صورة الملف الشخصي وتناسق الإطار الدائري */
+    .profile-frame {
+        width: 180px; 
+        height: 180px;
+    }
+    .profile-frame-intro {
+        width: 150px;
+        height: 150px;
+    }
+    .profile-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    /* 4. إجبار العناصر على النزول لسطر جديد إذا ضاقت الشاشة (لمنع التداخل) */
+    .hero-buttons { 
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+    
+    /* 5. ضبط المسافات والأحجام */
+    .hero-title { font-size: 2rem; text-align: center; }
+    .hero-subtitle, .hero-intro { text-align: center; margin-left: auto; margin-right: auto; }
+    .section { padding: var(--space-lg) 0; }
+    .about-grid, .works-grid, .con-grid, .management-grid, .education-grid, .links-grid { gap: var(--space-lg); }
+    .con-title { font-size: 2rem; }
+    .section-title { font-size: 1.8rem; }
+    .stat-number { font-size: 1.8rem; }
+    .intro-text { font-size: 1.2rem; padding: 0 15px; line-height: 1.5; }
+    .mt-4 { margin-top: var(--space-lg); }
+    .separator { margin: var(--space-xl) auto; }
+    .stat-box { padding: var(--space-md); }
+}
+
+@media (max-width: 480px) {
+    .stats-container, .links-grid { grid-template-columns: 1fr; }
+}
